@@ -32,13 +32,12 @@ foreach (target libdispatch_shared libdispatch_static)
         "${dispatch_SOURCE_DIR}/private"
         ${KQUEUE_INCLUDE_DIRS}
         ${PTHREAD_WORKQUEUE_INCLUDE_DIRS}
-        ${BLOCKS_RUNTIME_INCLUDE_DIRS}
     )
     target_link_libraries(${target}
         PRIVATE
         ${PTHREAD_WORKQUEUE_LIBRARIES}
         ${KQUEUE_LIBRARIES}
-        ${BLOCKS_RUNTIME_LIBRARIES}
+        objc2
         rt
         -pthread
     )
