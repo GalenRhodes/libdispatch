@@ -16,7 +16,7 @@ include (CheckCCompilerFlag)
 include (CheckCSourceCompiles)
 include (CMakePushCheckState)
 
-find_library(Dispatch_LIBOBJC "libobjc2.a" DOC "Location of libobjc.")
+find_library(Dispatch_LIBOBJC "objc2" DOC "Location of libobjc.")
 message(STATUS "${Dispatch_LIBOBJC}")
 
 enable_testing()
