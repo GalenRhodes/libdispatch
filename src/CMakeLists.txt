@@ -37,7 +37,7 @@ foreach (target libdispatch_shared libdispatch_static)
         PRIVATE
         ${PTHREAD_WORKQUEUE_LIBRARIES}
         ${KQUEUE_LIBRARIES}
-        objc2
+        ${Dispatch_LIBOBJC}
         rt
         -pthread
     )
